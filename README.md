@@ -1,6 +1,7 @@
 # websocketdemo
 Demo to show how to use MSB proxy websocket traffic.
 
+# The websocket server introduction
 http://hiroakis.com:8888
 
 ## How to access the websocket demo server via MSB api gateway
