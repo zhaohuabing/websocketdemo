@@ -1,0 +1,6 @@
+# Default values for config.
+nsPrefix: onap
+dockerSharePath: /dockerdata-nfs
+image:
+  repository: oomk8s/config-init:2.0.0-SNAPSHOT
+  pullPolicy: Always
