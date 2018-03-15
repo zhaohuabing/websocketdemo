@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: websocketdemo
+  name: websocketdemo
+  namespace: "{{ .Values.nsPrefix }}"
+  annotations:
+    msb.onap.org/service-info: '[
+      {
+          "serviceName": "websocketdemo",
+          "version": "v1",
+          "url": "/",
+          "protocol": "REST",
+          "port": "8888",
+          "visualRange":"1"
+      }
+      ]'
+spec:
+  ports:
+    - port: 8888 
+      nodePort: 30888 
+  selector:
+    app: websocketdemo
+  type: NodePort

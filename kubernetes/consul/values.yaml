@@ -1,0 +1,9 @@
+nsPrefix: "onap"
+nodePortPrefix: 302
+consuldockerTag: "latest"
+rootHostPath: "/dockerdata-nfs"
+consulimageRegistry: "docker.io/consul"
+consulAgentReplicas: 1
+consulServerReplicas: 3
+service:
+      type: NodePort

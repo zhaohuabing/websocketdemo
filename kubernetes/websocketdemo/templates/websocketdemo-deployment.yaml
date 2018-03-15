@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: websocketdemo
+  name: websocketdemo
+  namespace: "{{ .Values.nsPrefix }}"
+spec:
+  selector:
+    matchLabels:
+      app: websocketdemo
+  template:
+    metadata:
+      labels:
+        app: websocketdemo
+      name: websocketdemo
+    spec:
+      containers:
+      - name: websocketdemo
+        image: hiroakis/tornado-websocket-example 
+        imagePullPolicy: {{ .Values.pullPolicy }}
+        ports:
+        - containerPort: 8888 
